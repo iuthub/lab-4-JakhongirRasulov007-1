@@ -25,6 +25,15 @@
                <?php }  ?>
 
 			</ul>
+
+            <ul>
+                <h1>below are favourite songs</h1>
+                <?php  foreach (glob("./songs/*.txt") as $favs) { ?>
+                    <li class="playlistitem">
+                        <?= basename($favs)?>
+                    </li>
+                <?php } ?>
+            </ul>
 		</div>
 	</body>
 </html>
